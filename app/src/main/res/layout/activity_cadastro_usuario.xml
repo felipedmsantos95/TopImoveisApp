@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.edu.ufam.icomp.topimoveis.CadastroUsuario">
+
+    <TextView
+        android:id="@+id/textViewCadastrarUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="@string/textCadastrarUsuario"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageViewUsr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCadastrarUsuario"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:contentDescription="@string/ImgUsuarios"
+        app:srcCompat="@drawable/cliente32" />
+
+    <TextView
+        android:id="@+id/textViewNomeCompl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewUsr"
+        android:layout_marginTop="40dp"
+        android:layout_toStartOf="@+id/textViewCadastrarUsuario"
+        android:text="@string/textviewNomeCompl" />
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewUsr"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="29dp"
+        android:layout_toEndOf="@+id/textViewNomeCompl"
+        android:layout_toRightOf="@+id/textViewNomeCompl"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/nome" />
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textLogin"
+        android:layout_alignBaseline="@+id/editTextLogin"
+        android:layout_alignBottom="@+id/editTextLogin"
+        android:layout_toLeftOf="@+id/editTextNome"
+        android:layout_toStartOf="@+id/editTextNome" />
+
+    <EditText
+        android:id="@+id/editTextLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextNome"
+        android:layout_alignStart="@+id/editTextNome"
+        android:layout_below="@+id/editTextNome"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/editTextLogin" />
+
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextLogin"
+        android:layout_alignStart="@+id/editTextLogin"
+        android:layout_below="@+id/editTextLogin"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/textViewSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textSenha"
+        android:layout_alignBaseline="@+id/editTextSenha"
+        android:layout_alignBottom="@+id/editTextSenha"
+        android:layout_alignLeft="@+id/textViewLogin"
+        android:layout_alignStart="@+id/textViewLogin" />
+
+    <TextView
+        android:id="@+id/textViewConfSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewSenha"
+        android:layout_alignRight="@+id/textViewSenha"
+        android:layout_below="@+id/editTextSenha"
+        android:layout_marginTop="19dp"
+        android:text="@string/textviewConfSenha" />
+
+    <EditText
+        android:id="@+id/editTextConfSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewConfSenha"
+        android:layout_alignBottom="@+id/textViewConfSenha"
+        android:layout_alignLeft="@+id/editTextSenha"
+        android:layout_alignStart="@+id/editTextSenha"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextConfSenha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:onClick="cadastraCliente"
+        android:text="Button"
+        tools:ignore="HardcodedText"
+        tools:text="@string/buttonCadastrar" />
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TopImoveis App v1.0 </string>
+    <string name="logon">Efetuar Logon</string>
+    <string name="textLogin">Login:</string>
+    <string name="textSenha">Senha:</string>
+    <string name="radioCliente">Cliente</string>
+    <string name="radioAdm">Administrador</string>
+    <string name="buttonLogin">Entrar</string>
+    <string name="buttonCadastrar">Cadastrar</string>
+    <string name="textPergunta">Não possui login? Pode se cadastrar abaixo:</string>
+    <string name="sobre">Sobre</string>
+    <string name="textCadastrarUsuario">Cadastro de Usuário</string>
+    <string name="ImgUsuarios">usuarios</string>
+    <string name="textviewNomeCompl">Nome Completo:</string>
+    <string name="nome" />
+    <string name="editTextLogin" />
+    <string name="textviewConfSenha">Confirmar Senha:</string>
+
+
+</resources>

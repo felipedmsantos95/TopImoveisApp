@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.edu.ufam.icomp.topimoveis.TelaLogin">
+
+
+    <EditText
+        android:id="@+id/editTextLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/imageViewTop"
+        android:layout_alignRight="@+id/textViewPergunta"
+        android:layout_alignEnd="@+id/textViewPergunta"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_below="@+id/editTextLogin"
+        android:layout_alignLeft="@+id/editTextLogin"
+        android:layout_alignStart="@+id/editTextLogin" />
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textLogin"
+        android:layout_alignBaseline="@+id/editTextLogin"
+        android:layout_alignBottom="@+id/editTextLogin"
+        android:layout_alignLeft="@+id/textViewPergunta"
+        android:layout_alignStart="@+id/textViewPergunta" />
+
+    <TextView
+        android:id="@+id/textViewSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextSenha"
+        android:layout_alignBottom="@+id/editTextSenha"
+        android:layout_alignLeft="@+id/textViewLogin"
+        android:layout_alignStart="@+id/textViewLogin"
+        android:text="@string/textSenha" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup3"
+        android:layout_below="@+id/editTextSenha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextSenha"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="29dp"
+            android:layout_toLeftOf="@+id/radioButtonAdm"
+            android:layout_toStartOf="@+id/radioButtonAdm"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/radioCliente"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAdm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_weight="1"
+            android:text="@string/radioAdm" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonEntrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonLogin"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/radioGroup3"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPergunta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:onClick="irTelaCadastroCliente"
+        android:text="@string/buttonCadastrar" />
+
+    <TextView
+        android:id="@+id/textViewPergunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textPergunta"
+        android:layout_below="@+id/buttonEntrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp" />
+
+    <ImageView
+        android:id="@+id/imageViewTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/top64"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription=""
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>
+
+
