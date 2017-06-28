@@ -15,6 +15,10 @@
     <string name="nome" />
     <string name="editTextLogin" />
     <string name="textviewConfSenha">Confirmar Senha:</string>
+    <string name="buttonCadastrarImovel">Cadastrar Imóvel</string>
+    <string name="buttonRemoverImovel">Remover Imóvel</string>
+    <string name="buttonAterarImvovel">Alterar Imóvel</string>
+    <string name="textviewTituloCliente">Selecione um imóvel abaixo para ver detalhes:</string>
 
 
 </resources>

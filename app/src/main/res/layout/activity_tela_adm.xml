@@ -1,9 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="br.edu.ufam.icomp.topimoveis.TelaAdm">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/buttonCadastrarImovel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp"
+        android:text="@string/buttonCadastrarImovel" />
+
+    <Button
+        android:id="@+id/buttonRemoverImovel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonRemoverImovel"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/buttonAlterarImovel"
+        android:layout_alignEnd="@+id/buttonAlterarImovel"
+        android:layout_alignLeft="@+id/buttonAlterarImovel"
+        android:layout_alignStart="@+id/buttonAlterarImovel" />
+
+    <Button
+        android:id="@+id/buttonAlterarImovel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonAterarImvovel"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/buttonCadastrarImovel"
+        android:layout_alignRight="@+id/buttonCadastrarImovel"
+        android:layout_alignEnd="@+id/buttonCadastrarImovel"
+        android:layout_alignLeft="@+id/buttonCadastrarImovel"
+        android:layout_alignStart="@+id/buttonCadastrarImovel" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/house64"
+        tools:ignore="ContentDescription"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="99dp" />
+</RelativeLayout>

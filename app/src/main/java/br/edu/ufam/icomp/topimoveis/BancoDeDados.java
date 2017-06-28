@@ -12,7 +12,7 @@ public class BancoDeDados extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "TopImoveis.db";
     private static final String SQL_CREATE_TABLE_USR = "CREATE TABLE Usuarios(login TEXT PRIMARY KEY, nome TEXT, senha TEXT, tipo INT)";
-    private static final String SQL_CREATE_TABLE_IMV = "CREATE TABLE Imoveis(id INTEGER PRIMARY KEY AUTOINCREMET, endereco TEXT, quartos INT, suites INT, vagas INT, custo FLOAT, alugado INT)";
+    private static final String SQL_CREATE_TABLE_IMV = "CREATE TABLE Imoveis(id INTEGER PRIMARY KEY AUTOINCREMENT, endereco TEXT, quartos INT, suites INT, vagas INT, custo FLOAT, alugado INT)";
     private static final String SQL_DELETE_TABLE_USR = "DROP TABLE IF EXISTS Usuarios";
     private static final String SQL_DELETE_TABLE_IMV = "DROP TABLE IF EXISTS Imoveis";
 

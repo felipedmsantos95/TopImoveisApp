@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Toast;
 
 
 public class TelaLogin extends AppCompatActivity {
@@ -53,4 +56,37 @@ public class TelaLogin extends AppCompatActivity {
         Intent intent =  new Intent(this, CadastroUsuario.class);
         startActivity(intent);
     }
+
+    public void entrarClicado (View view)
+    {
+        Intent intentCli = new Intent(this, TelaCliente.class);
+        Intent intentAdm = new Intent(this, TelaAdm.class);
+
+        EditText inputLogin = (EditText) findViewById(R.id.editTextLogin);
+        EditText inputSenha = (EditText) findViewById(R.id.editTextSenha);
+        RadioButton radioCliente = (RadioButton) findViewById(R.id.radioButtonCliente);
+        int tipo = radioCliente.isChecked() ? 1 : 2;
+
+        UsuarioDAO usr = new UsuarioDAO(this);
+        Usuario usuario = usr.getUsuario(inputLogin.getText().toString(), inputSenha.getText().toString(), tipo);
+
+        if(usuario != null && tipo == 1)
+        {
+            intentCli.putExtra("usuario", usuario);
+            startActivity(intentCli);
+        }
+        else if(usuario != null && tipo == 2)
+        {
+            intentCli.putExtra("administrador", usuario);
+            startActivity(intentAdm);
+        }
+        else
+        {
+            Toast.makeText(this, "Usuário e/ou Senha inválidos!", Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
+
+
 }

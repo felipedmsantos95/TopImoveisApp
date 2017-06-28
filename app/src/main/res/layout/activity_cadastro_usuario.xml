@@ -31,10 +31,11 @@
         android:id="@+id/textViewNomeCompl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageViewUsr"
-        android:layout_marginTop="40dp"
-        android:layout_toStartOf="@+id/textViewCadastrarUsuario"
-        android:text="@string/textviewNomeCompl" />
+        android:text="@string/textviewNomeCompl"
+        android:layout_alignBaseline="@+id/editTextNome"
+        android:layout_alignBottom="@+id/editTextNome"
+        android:layout_toLeftOf="@+id/radioGroup"
+        android:layout_toStartOf="@+id/radioGroup" />
 
     <EditText
         android:id="@+id/editTextNome"
@@ -88,8 +89,8 @@
         android:text="@string/textSenha"
         android:layout_alignBaseline="@+id/editTextSenha"
         android:layout_alignBottom="@+id/editTextSenha"
-        android:layout_alignLeft="@+id/textViewLogin"
-        android:layout_alignStart="@+id/textViewLogin" />
+        android:layout_alignRight="@+id/textViewLogin"
+        android:layout_alignEnd="@+id/textViewLogin" />
 
     <TextView
         android:id="@+id/textViewConfSenha"
@@ -105,23 +106,56 @@
         android:id="@+id/editTextConfSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewConfSenha"
-        android:layout_alignBottom="@+id/textViewConfSenha"
-        android:layout_alignLeft="@+id/editTextSenha"
-        android:layout_alignStart="@+id/editTextSenha"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:layout_below="@+id/editTextSenha"
+        android:layout_alignLeft="@+id/editTextSenha"
+        android:layout_alignStart="@+id/editTextSenha" />
 
     <Button
         android:id="@+id/buttonCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextConfSenha"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
+        android:layout_marginBottom="19dp"
         android:onClick="cadastraCliente"
-        android:text="Button"
-        tools:ignore="HardcodedText"
-        tools:text="@string/buttonCadastrar" />
+        android:text="@string/buttonCadastrar"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/radioButtonCliente"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/editTextConfSenha"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/radioButtonCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/radioButtonAdmin"
+            android:layout_alignEnd="@+id/editTextConfSenha"
+            android:layout_alignRight="@+id/editTextConfSenha"
+            android:layout_alignTop="@+id/radioButtonAdmin"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/radioButtonAdmin"
+            android:text="@string/radioCliente"
+            tools:ignore="ObsoleteLayoutParam,RtlHardcoded" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_alignEnd="@+id/imageViewUsr"
+            android:layout_alignRight="@+id/imageViewUsr"
+            android:layout_below="@+id/editTextConfSenha"
+            android:layout_marginTop="29dp"
+            android:text="@string/radioAdm"
+            tools:ignore="ObsoleteLayoutParam" />
+    </RadioGroup>
 
 </RelativeLayout>
