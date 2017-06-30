@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".CadastroUsuario" />
         <activity android:name=".TelaAdm" />
-        <activity android:name=".TelaCliente"></activity>
+        <activity android:name=".TelaCliente" />
+        <activity android:name=".TelaCadastroImovel"></activity>
     </application>
 
 </manifest>

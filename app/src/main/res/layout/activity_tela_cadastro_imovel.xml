@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.edu.ufam.icomp.topimoveis.TelaCadastroImovel">
+
+    <TextView
+        android:id="@+id/textViewEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/textviewEndereco"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editTextEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/editTextEndereco"
+        tools:ignore="RtlHardcoded"
+        android:layout_below="@+id/textViewEndereco"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editTextQuartos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/textViewQuartos"
+        android:layout_alignLeft="@+id/textViewQuartos"
+        android:layout_alignStart="@+id/textViewQuartos"
+        android:layout_alignRight="@+id/textViewSuites"
+        android:layout_alignEnd="@+id/textViewSuites" />
+
+    <TextView
+        android:id="@+id/textViewQuartos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewNumQuartos"
+        android:layout_below="@+id/editTextEndereco"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editTextSuites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/editTextQuartos"
+        android:layout_marginTop="18dp"
+        android:layout_alignLeft="@+id/textViewQuartos"
+        android:layout_alignStart="@+id/textViewQuartos"
+        android:layout_alignRight="@+id/textViewSuites"
+        android:layout_alignEnd="@+id/textViewSuites" />
+
+    <TextView
+        android:id="@+id/textViewSuites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewNumSuites"
+        android:layout_below="@+id/editTextQuartos"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textViewGaragem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextSuites"
+        android:layout_centerHorizontal="true"
+        android:text="@string/textviewVagas" />
+
+    <EditText
+        android:id="@+id/editTextGaragem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/textViewGaragem"
+        android:layout_alignRight="@+id/editTextSuites"
+        android:layout_alignEnd="@+id/editTextSuites"
+        android:layout_alignLeft="@+id/editTextSuites"
+        android:layout_alignStart="@+id/editTextSuites" />
+
+    <TextView
+        android:id="@+id/textViewCusto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/textviewCusto"
+        android:textStyle="bold"
+        android:layout_below="@+id/editTextGaragem"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editTextCusto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/textViewCusto"
+        android:layout_alignLeft="@+id/textViewGaragem"
+        android:layout_alignStart="@+id/textViewGaragem"
+        android:layout_alignRight="@+id/textViewGaragem"
+        android:layout_alignEnd="@+id/textViewGaragem" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/house64"
+        tools:ignore="ContentDescription"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/textViewEndereco"
+        android:layout_alignStart="@+id/textViewEndereco" />
+
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextCusto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:onClick="cadastrarImovel"
+        android:text="@string/buttonCadastrar" />
+
+</RelativeLayout>

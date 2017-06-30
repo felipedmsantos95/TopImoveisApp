@@ -13,30 +13,18 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="82dp"
+        android:onClick="irTelaCadastroImovel"
         android:text="@string/buttonCadastrarImovel" />
 
     <Button
         android:id="@+id/buttonRemoverImovel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="irTelaRemoverImovel"
         android:text="@string/buttonRemoverImovel"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/buttonAlterarImovel"
-        android:layout_alignEnd="@+id/buttonAlterarImovel"
-        android:layout_alignLeft="@+id/buttonAlterarImovel"
-        android:layout_alignStart="@+id/buttonAlterarImovel" />
-
-    <Button
-        android:id="@+id/buttonAlterarImovel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonAterarImvovel"
-        android:layout_marginTop="25dp"
         android:layout_below="@+id/buttonCadastrarImovel"
-        android:layout_alignRight="@+id/buttonCadastrarImovel"
-        android:layout_alignEnd="@+id/buttonCadastrarImovel"
-        android:layout_alignLeft="@+id/buttonCadastrarImovel"
-        android:layout_alignStart="@+id/buttonCadastrarImovel" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp" />
 
     <ImageView
         android:id="@+id/imageView"

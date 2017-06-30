@@ -19,6 +19,12 @@
     <string name="buttonRemoverImovel">Remover Imóvel</string>
     <string name="buttonAterarImvovel">Alterar Imóvel</string>
     <string name="textviewTituloCliente">Selecione um imóvel abaixo para ver detalhes:</string>
+    <string name="textviewEndereco">Endereço:</string>
+    <string name="editTextEndereco" />
+    <string name="textviewNumQuartos">Nº de Quartos:</string>
+    <string name="textviewNumSuites">Nº de Suítes:</string>
+    <string name="textviewVagas">Nº de Vagas de Garagem:</string>
+    <string name="textviewCusto">Custo:</string>
 
 
 </resources>
