@@ -7,46 +7,79 @@
         android:id="@+id/linhaEndereco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="17dp"
         android:text="@string/textviewEndereco"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/textView6"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewEndereco"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/linhaQuartos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linhaEndereco"
-        android:layout_alignStart="@+id/linhaEndereco"
+        android:text="@string/textviewNumQuartos"
         android:layout_below="@+id/linhaEndereco"
-        android:layout_marginLeft="26dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="14dp"
-        android:text="@string/textviewNumQuartos" />
+        android:layout_toRightOf="@+id/linhaCusto"
+        android:layout_toEndOf="@+id/linhaCusto" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewNumQuartos"
+        android:layout_below="@+id/linhaEndereco"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6" />
 
     <TextView
         android:id="@+id/linhaSuites"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linhaQuartos"
-        android:layout_alignStart="@+id/linhaQuartos"
+        android:text="@string/textviewNumSuites"
         android:layout_below="@+id/linhaQuartos"
-        android:layout_marginTop="12dp"
-        android:text="@string/textviewNumSuites" />
+        android:layout_toRightOf="@+id/textView10"
+        android:layout_toEndOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewNumSuites"
+        android:layout_below="@+id/textView10"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10" />
 
     <TextView
         android:id="@+id/linhaVagas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linhaSuites"
-        android:layout_alignStart="@+id/linhaSuites"
+        android:text="@string/textviewVagas"
         android:layout_below="@+id/linhaSuites"
-        android:layout_marginTop="12dp"
-        android:text="@string/textviewVagas" />
+        android:layout_toRightOf="@+id/linhaSuites"
+        android:layout_toEndOf="@+id/linhaSuites" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewVagas"
+        android:layout_below="@+id/linhaSuites"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
 
     <TextView
         android:id="@+id/linhaCusto"
@@ -54,8 +87,17 @@
         android:layout_height="wrap_content"
         android:text="@string/textviewCusto"
         android:textStyle="bold"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/linhaVagas"
-        android:layout_alignLeft="@+id/linhaVagas"
-        android:layout_alignStart="@+id/linhaVagas" />
+        android:layout_below="@+id/textView8"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/custo_r"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView8"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8" />
 </RelativeLayout>
