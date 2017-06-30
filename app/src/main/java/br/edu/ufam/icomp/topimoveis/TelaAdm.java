@@ -1,8 +1,10 @@
 package br.edu.ufam.icomp.topimoveis;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 public class TelaAdm extends AppCompatActivity {
 
@@ -23,6 +25,19 @@ public class TelaAdm extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.i("HelloDebug", "Método onResume executado...");
+    }
+
+    public void irTelaCadastroImovel(View view)
+    {
+        Intent intent = new Intent(this, TelaCadastroImovel.class);
+        startActivity(intent);
+    }
+
+    public void irTelaRemoverImovel(View view)
+    {
+        //Intent intent = new Intent(this, TelaCadastroImovel.class);
+        //startActivity(intent);
+
     }
 
 

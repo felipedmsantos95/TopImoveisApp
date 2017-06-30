@@ -24,6 +24,16 @@ public class Imovel implements Serializable {
         setCusto(custo);
     }
 
+    public Imovel(String endereco, int quartos, int suites, int vagas,  float custo, int alugado)
+    {
+        setEndereco(endereco);
+        setQuartos(quartos);
+        setSuites(suites);
+        setVagas(vagas);
+        setAlugado(alugado);
+        setCusto(custo);
+    }
+
     public void setEndereco(String endereco)
     {
         this.endereco = endereco;

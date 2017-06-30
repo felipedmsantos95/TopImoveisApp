@@ -64,5 +64,10 @@ public class ImovelDAO {
         }
     }
 
+    public Cursor getImoveis()
+    {
+        return this.bancoDeDados.rawQuery("SELECT rowid AS _id, " + "endereco, quartos, suites, vagas, custo, " + "CASE WHEN alugado = 1 THEN 'Alugado' ELSE 'Disponível' END AS alugado " + "FROM Imoveis ORDER BY custo", null);
+    }
+
 
 }

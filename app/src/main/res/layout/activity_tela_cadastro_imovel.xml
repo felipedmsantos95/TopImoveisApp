@@ -19,24 +19,26 @@
         android:id="@+id/editTextEndereco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewEndereco"
+        android:layout_centerHorizontal="true"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/editTextEndereco"
-        tools:ignore="RtlHardcoded"
-        android:layout_below="@+id/textViewEndereco"
-        android:layout_centerHorizontal="true" />
+        android:textAlignment="center"
+        tools:ignore="RtlHardcoded" />
 
     <EditText
         android:id="@+id/editTextQuartos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewSuites"
+        android:layout_alignLeft="@+id/textViewQuartos"
+        android:layout_alignRight="@+id/textViewSuites"
+        android:layout_alignStart="@+id/textViewQuartos"
+        android:layout_below="@+id/textViewQuartos"
         android:ems="10"
         android:inputType="number"
-        android:layout_below="@+id/textViewQuartos"
-        android:layout_alignLeft="@+id/textViewQuartos"
-        android:layout_alignStart="@+id/textViewQuartos"
-        android:layout_alignRight="@+id/textViewSuites"
-        android:layout_alignEnd="@+id/textViewSuites" />
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/textViewQuartos"
@@ -50,14 +52,15 @@
         android:id="@+id/editTextSuites"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
+        android:layout_alignEnd="@+id/textViewSuites"
+        android:layout_alignLeft="@+id/textViewQuartos"
+        android:layout_alignRight="@+id/textViewSuites"
+        android:layout_alignStart="@+id/textViewQuartos"
         android:layout_below="@+id/editTextQuartos"
         android:layout_marginTop="18dp"
-        android:layout_alignLeft="@+id/textViewQuartos"
-        android:layout_alignStart="@+id/textViewQuartos"
-        android:layout_alignRight="@+id/textViewSuites"
-        android:layout_alignEnd="@+id/textViewSuites" />
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/textViewSuites"
@@ -79,13 +82,14 @@
         android:id="@+id/editTextGaragem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:layout_below="@+id/textViewGaragem"
-        android:layout_alignRight="@+id/editTextSuites"
         android:layout_alignEnd="@+id/editTextSuites"
         android:layout_alignLeft="@+id/editTextSuites"
-        android:layout_alignStart="@+id/editTextSuites" />
+        android:layout_alignRight="@+id/editTextSuites"
+        android:layout_alignStart="@+id/editTextSuites"
+        android:layout_below="@+id/textViewGaragem"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/textViewCusto"
@@ -101,13 +105,14 @@
         android:id="@+id/editTextCusto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textViewGaragem"
+        android:layout_alignLeft="@+id/textViewGaragem"
+        android:layout_alignRight="@+id/textViewGaragem"
+        android:layout_alignStart="@+id/textViewGaragem"
+        android:layout_below="@+id/textViewCusto"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:layout_below="@+id/textViewCusto"
-        android:layout_alignLeft="@+id/textViewGaragem"
-        android:layout_alignStart="@+id/textViewGaragem"
-        android:layout_alignRight="@+id/textViewGaragem"
-        android:layout_alignEnd="@+id/textViewGaragem" />
+        android:textAlignment="center" />
 
     <ImageView
         android:id="@+id/imageView2"

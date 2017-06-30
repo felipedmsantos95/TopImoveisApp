@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/linhaEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/textviewEndereco"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/linhaQuartos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linhaEndereco"
+        android:layout_alignStart="@+id/linhaEndereco"
+        android:layout_below="@+id/linhaEndereco"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/textviewNumQuartos" />
+
+    <TextView
+        android:id="@+id/linhaSuites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linhaQuartos"
+        android:layout_alignStart="@+id/linhaQuartos"
+        android:layout_below="@+id/linhaQuartos"
+        android:layout_marginTop="12dp"
+        android:text="@string/textviewNumSuites" />
+
+    <TextView
+        android:id="@+id/linhaVagas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linhaSuites"
+        android:layout_alignStart="@+id/linhaSuites"
+        android:layout_below="@+id/linhaSuites"
+        android:layout_marginTop="12dp"
+        android:text="@string/textviewVagas" />
+
+    <TextView
+        android:id="@+id/linhaCusto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textviewCusto"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/linhaVagas"
+        android:layout_alignLeft="@+id/linhaVagas"
+        android:layout_alignStart="@+id/linhaVagas" />
+</RelativeLayout>

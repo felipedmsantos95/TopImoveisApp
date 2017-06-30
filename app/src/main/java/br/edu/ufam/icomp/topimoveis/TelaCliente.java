@@ -1,10 +1,11 @@
 package br.edu.ufam.icomp.topimoveis;
 
+import android.app.ListActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class TelaCliente extends AppCompatActivity {
+public class TelaCliente extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
