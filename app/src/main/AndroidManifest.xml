@@ -19,7 +19,10 @@
         <activity android:name=".CadastroUsuario" />
         <activity android:name=".TelaAdm" />
         <activity android:name=".TelaCliente" />
-        <activity android:name=".TelaCadastroImovel"></activity>
+        <activity android:name=".TelaCadastroImovel" />
+        <activity android:name=".ListaClientes" />
+        <activity android:name=".ListaImoveisAlugados" />
+        <activity android:name=".TelaRemoverImovel"></activity>
     </application>
 
 </manifest>

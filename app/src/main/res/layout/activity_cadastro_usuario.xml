@@ -69,7 +69,7 @@
         android:layout_alignStart="@+id/editTextNome"
         android:layout_below="@+id/editTextNome"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:text="@string/editTextLogin" />
 
     <EditText

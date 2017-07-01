@@ -48,4 +48,11 @@ public class UsuarioDAO {
             return false;
         }
     }
+
+    public Cursor getUsuarios()
+    {
+        return this.bancoDeDados.rawQuery("SELECT rowid AS _id, " + "login, nome, " + "CASE WHEN tipo = 1 THEN 'Cliente' ELSE 'Administrador' END AS tipo " + "FROM Usuarios WHERE tipo = 1 ORDER BY nome", null);
+    }
+
+
 }

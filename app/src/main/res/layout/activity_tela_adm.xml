@@ -10,11 +10,14 @@
         android:id="@+id/buttonCadastrarImovel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="82dp"
+        android:layout_marginTop="64dp"
         android:onClick="irTelaCadastroImovel"
-        android:text="@string/buttonCadastrarImovel" />
+        android:text="@string/buttonCadastrarImovel"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignLeft="@+id/buttonRemoverImovel"
+        android:layout_alignStart="@+id/buttonRemoverImovel"
+        android:layout_alignRight="@+id/buttonRemoverImovel"
+        android:layout_alignEnd="@+id/buttonRemoverImovel" />
 
     <Button
         android:id="@+id/buttonRemoverImovel"
@@ -22,9 +25,12 @@
         android:layout_height="wrap_content"
         android:onClick="irTelaRemoverImovel"
         android:text="@string/buttonRemoverImovel"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/buttonCadastrarImovel"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp" />
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -35,4 +41,27 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="99dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="irTelaListaClientes"
+        android:text="@string/buttonListarClientes"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="52dp"
+        android:layout_alignRight="@+id/buttonCadastrarImovel"
+        android:layout_alignEnd="@+id/buttonCadastrarImovel"
+        android:layout_alignLeft="@+id/buttonCadastrarImovel"
+        android:layout_alignStart="@+id/buttonCadastrarImovel" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonRemoverImovel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:onClick="irTelaListaImoveisAlugados"
+        android:text="@string/buttonListarAlugados" />
 </RelativeLayout>

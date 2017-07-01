@@ -64,9 +64,60 @@ public class ImovelDAO {
         }
     }
 
-    public Cursor getImoveis()
+    public boolean alugaImovel(int id)
     {
-        return this.bancoDeDados.rawQuery("SELECT rowid AS _id, " + "endereco, quartos, suites, vagas, custo, " + "CASE WHEN alugado = 1 THEN 'Alugado' ELSE 'Disponível' END AS alugado " + "FROM Imoveis ORDER BY custo", null);
+        try
+        {
+            String sqlCmd = "UPDATE Imoveis SET alugado = 1 WHERE id=" + id;
+            this.bancoDeDados.execSQL(sqlCmd);
+            return true;
+        }
+        catch (SQLException e)
+        {
+            Log.e("HelloDebug", e.getMessage());
+            return false;
+        }
+    }
+
+    public boolean desalugaImovel(int id)
+    {
+        try
+        {
+            String sqlCmd = "UPDATE Imoveis SET alugado = 0 WHERE id=" + id;
+            this.bancoDeDados.execSQL(sqlCmd);
+            return true;
+        }
+        catch (SQLException e)
+        {
+            Log.e("HelloDebug", e.getMessage());
+            return false;
+        }
+    }
+
+    public int getImovelID(String endereco, int quartos, int suites, int vagas, float custo)
+    {
+        int id = 0;
+
+        String sqlQuery = "SELECT id FROM Imoveis WHERE " + "endereco='" + endereco + "'AND quartos =" + quartos + " AND suites = " + suites + " AND vagas = " + vagas + " AND custo = " + custo;
+
+        Cursor cursor = this.bancoDeDados.rawQuery(sqlQuery, null);
+
+        if(cursor.moveToNext())
+        {
+            id = cursor.getInt(0);
+        }
+        cursor.close();
+        return id;
+    }
+
+    public Cursor getImoveisD()
+    {
+        return this.bancoDeDados.rawQuery("SELECT rowid AS _id, " + "endereco, quartos, suites, vagas, custo, " + "CASE WHEN alugado = 1 THEN 'Alugado' ELSE 'Disponível' END AS alugado " + "FROM Imoveis WHERE alugado = 0 ORDER BY custo", null);
+    }
+
+    public Cursor getImoveisA()
+    {
+        return this.bancoDeDados.rawQuery("SELECT rowid AS _id, " + "endereco, quartos, suites, vagas, custo, " + "CASE WHEN alugado = 1 THEN 'Alugado' ELSE 'Disponível' END AS alugado " + "FROM Imoveis WHERE alugado = 1 ORDER BY custo", null);
     }
 
 

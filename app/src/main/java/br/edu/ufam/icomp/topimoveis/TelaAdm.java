@@ -35,10 +35,27 @@ public class TelaAdm extends AppCompatActivity {
 
     public void irTelaRemoverImovel(View view)
     {
-        //Intent intent = new Intent(this, TelaCadastroImovel.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, TelaRemoverImovel.class);
+        startActivity(intent);
 
     }
+
+
+    public void irTelaListaClientes(View view)
+    {
+        Intent intent = new Intent(this, ListaClientes.class);
+        startActivity(intent);
+
+    }
+
+    public void irTelaListaImoveisAlugados(View view)
+    {
+        Intent intent = new Intent(this, ListaImoveisAlugados.class);
+        startActivity(intent);
+
+    }
+
+
 
 
 

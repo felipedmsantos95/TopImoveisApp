@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class TelaCliente extends ListActivity {
+public class TelaRemoverImovel extends ListActivity {
 
     private ImovelDAO imovelDAO;
     private SimpleCursorAdapter dados;
@@ -55,14 +55,14 @@ public class TelaCliente extends ListActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setTitle("Tem interesse neste imóvel?");
+        builder.setTitle("Deseja remover este imóvel do banco de dados? Não será possível desfazer a ação.");
         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener(){
 
             public void onClick(DialogInterface arg0, int arg1)
             {
-                imovelDAO.alugaImovel(idImovel);
-                Toast.makeText(TelaCliente.this, "Obrigado, entraremos em contato!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(TelaCliente.this, TelaCliente.class);//Atualizar Tela
+                imovelDAO.removeImovel(idImovel);
+                Toast.makeText(TelaRemoverImovel.this, "Imóvel Removido!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(TelaRemoverImovel.this, TelaCliente.class);//Atualizar Tela
                 startActivity(intent);
             }
         });

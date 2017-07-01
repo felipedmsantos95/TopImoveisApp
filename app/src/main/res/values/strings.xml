@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TopImoveis App v1.0 </string>
     <string name="logon">Efetuar Logon</string>
-    <string name="textLogin">Login:</string>
+    <string name="textLogin">E-mail:</string>
     <string name="textSenha">Senha:</string>
     <string name="radioCliente">Cliente</string>
     <string name="radioAdm">Administrador</string>
@@ -25,7 +25,10 @@
     <string name="textviewNumSuites">Nº de Suítes: </string>
     <string name="textviewVagas">Nº de Vagas de Garagem: </string>
     <string name="textviewCusto">Custo: </string>
-    <string name="custo_r">Custo: R$</string>
+    <string name="custo_r">Custo do Aluguel: R$</string>
+    <string name="buttonListarAlugados">Listar Imóveis Clicados</string>
+    <string name="buttonListarClientes">Listar Clientes</string>
+    <string name="Nome">Nome:</string>
 
 
 </resources>

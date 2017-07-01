@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class TelaCliente extends ListActivity {
+public class ListaImoveisAlugados extends ListActivity {
 
     private ImovelDAO imovelDAO;
     private SimpleCursorAdapter dados;
@@ -28,8 +28,8 @@ public class TelaCliente extends ListActivity {
         //setContentView(R.layout.activity_tela_cliente);
 
         dados = new SimpleCursorAdapter(this,
-                R.layout.imovel_linha,
-                imovelDAO.getImoveisD(),
+                R.layout.imovel_alugado_linha,
+                imovelDAO.getImoveisA(),
                 new String[] {"endereco", "quartos", "suites", "vagas", "custo"},
                 new int[] {R.id.linhaEndereco,
                         R.id.linhaQuartos,
@@ -55,14 +55,14 @@ public class TelaCliente extends ListActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setTitle("Tem interesse neste imóvel?");
+        builder.setTitle("Deseja disponibilizar este imóvel para os clientes?");
         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener(){
 
             public void onClick(DialogInterface arg0, int arg1)
             {
-                imovelDAO.alugaImovel(idImovel);
-                Toast.makeText(TelaCliente.this, "Obrigado, entraremos em contato!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(TelaCliente.this, TelaCliente.class);//Atualizar Tela
+                imovelDAO.desalugaImovel(idImovel);
+                Toast.makeText(ListaImoveisAlugados.this, "O imóvel agora é exibido para os clientes!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ListaImoveisAlugados.this, ListaImoveisAlugados.class);//Atualizar Tela
                 startActivity(intent);
             }
         });
